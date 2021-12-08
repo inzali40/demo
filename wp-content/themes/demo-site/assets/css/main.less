@@ -1,0 +1,346 @@
+/*
+|-------------------------------------------------------------------------------------------------------------------------------
+| Variables
+|-------------------------------------------------------------------------------------------------------------------------------
+|
+*/
+// @font-title: 'Montserrat', sans-serif;
+// @font-body: 'Poppins', sans-serif;
+// @font-mm: pyidaungsu;
+// @fontawesome: 'Font Awesome 5 Free';
+@fontawesome: 'Font Awesome 6 Pro';
+@color-golden-orange-brand: #ffc211;
+@color-charcoal-brand: #212a32;
+@color-white: #fff;
+@color-black: #000;
+
+.transition(@duration: .3s, @ease: ease-in-out) {
+	-webkit-transition: all @duration @ease;
+	-moz-transition: all @duration @ease;
+	-o-transition: all @duration @ease;
+	-ms-transition: all @duration @ease;
+	transition: all @duration @ease;
+}
+
+// Align middle for block element
+.middle-wrap() {
+	height: 100%;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	.middle-block {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+}
+/*
+|-------------------------------------------------------------------------------------------------------------------------------
+| WordPress Core styles
+|-------------------------------------------------------------------------------------------------------------------------------
+|
+*/
+img {
+	height: auto;
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+	img {
+		&.aligncenter {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&.alignnone {
+			margin: 5px 20px 20px 0;
+		}
+		&.alignright {
+			float: right;
+			margin: 5px 0 20px 20px;
+		}
+		&.alignleft {
+			float: left;
+			margin: 5px 20px 20px 0;
+		}
+	}
+	&:hover {
+		text-decoration: none;
+	}
+}
+.wp-caption {
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	max-width: 96%;
+	text-align: center;
+	padding: 5px 3px 10px;
+	img {
+		border: 0 none;
+		height: auto;
+		max-width: 98.5%;
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+	p {
+		&.wp-caption-text {
+			font-size: 11px;
+			line-height: 17px;
+			margin: 0;
+			padding: 0 4px 5px;
+		}
+	}
+	&.alignright {
+		margin: 5px 0 20px 20px;
+	}
+	&.alignnone {
+		margin: 5px 20px 20px 0;
+	}
+	&.alignleft {
+		margin: 5px 20px 20px 0;
+	}
+}
+.alignnone {
+	margin: 5px 20px 20px 0;
+}
+.aligncenter {
+	display: block;
+	margin: 5px auto;
+}
+.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+.stellarnav {
+	> ul {
+		li {
+			&.current-menu-item {
+				> a {
+					color: @color-golden-orange-brand;
+				}
+			}
+			&.current_page_parent {
+				> a {
+					color: @color-golden-orange-brand;
+				}
+			}
+		}
+	}
+}
+//header
+ul#menu-main-menu {
+    background-color: lightblue;
+	//  padding: 22px;
+}
+.stellarnav li a {
+	color:balck !important
+}
+// .stellarnav {
+// 	margin-top: -26px;
+// }
+
+header.site-header {
+    background: lightblue;
+}
+.news , .service , .about-us ,.slider ,.sidebar , .about-page ,.blog ,.tab{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+h4.sidebar-title {
+    font-size: 15px;
+}
+img.about-img {
+    margin-bottom: 30px;
+}
+/* swiper */
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+footer {
+	background: @color-charcoal-brand;
+	padding-top: 1.6rem;
+	padding-bottom: 1.6rem;
+	.copyright-container {
+		text-align: center;
+		p {
+			margin-bottom: 0;
+		}
+		a {
+			font-size: 14px;
+			color: #b4b4b4;
+			.transition();
+			.service-owner {
+				color: @color-golden-orange-brand;
+			}
+			&:hover {
+				color: @color-golden-orange-brand;
+			}
+		}
+		.service-owner-logo {
+			width: 46px;
+			margin-left: 7px;
+		}
+	}
+}
+
+/*
+|-------------------------------------------------------------------------------------------------------------------------------
+| Media Query (Min)
+|-------------------------------------------------------------------------------------------------------------------------------
+| Small devices (landscape phones, 576px and up), 
+| Medium devices (tablets, 768px and up), 
+| Large devices (desktops, 992px and up), 
+| Extra large devices (large desktops, 1200px and up), 
+| and other standard screen sizes (414px, 375px and 320px and up - Note: get from browser)
+|-------------------------------------------------------------------------------------------------------------------------------
+|
+*/
+// Extra small devices (sm <=, landscape phones, 320px and up)
+@media (min-width: 320px) {
+}
+
+// Extra small devices (sm <=, landscape phones, 375px and up)
+@media (min-width: 375px) {
+}
+
+// Extra small devices (sm <=, landscape phones, 414px and up)
+@media (min-width: 414px) {
+}
+
+// Extra small devices (sm <=, landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Small devices (sm <=, landscape phones, less than 768px)
+@media (min-width: 768px) {
+}
+
+// Medium devices (md <=, tablets, less than 991.98px)
+@media (min-width: 992px) {
+}
+
+// Large devices (lg <=, desktops, less than 1200px)
+@media (min-width: 1200px) {
+}
+
+// Large devices (xl <=, normal laptop)
+@media (min-width: 1368px) { 
+}
+
+/*
+|-------------------------------------------------------------------------------------------------------------------------------
+| Media Query (Max)
+|-------------------------------------------------------------------------------------------------------------------------------
+| Large devices (desktops, less than 1200px), 
+| Medium devices (tablets, less than 992px), 
+| Small devices (landscape phones, less than 768px), 
+| Extra small devices (portrait phones, less than 576px), 
+| and other standard screen sizes (less than 414px, 375px and 320px - Note: get from browser)
+|-------------------------------------------------------------------------------------------------------------------------------
+|
+*/
+// Large devices (xl >=, normal laptop)
+@media (max-width: 1367.98px) { 
+}
+
+// Large devices (lg >=, desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+}
+
+// Medium devices (md >=, tablets, less than 991.98px)
+@media (max-width: 991.98px) { 
+}
+
+// Small devices (sm >=, landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+}
+
+// Extra small devices (sm >=, portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+}
+
+// Extra small devices (sm >=, portrait phones, less than 414px)
+@media (max-width: 413.98px) { 
+}
+
+// Extra small devices (sm >=, portrait phones, less than 375px)
+@media (max-width: 374.98px) { 
+}
+
+// Extra small devices (sm >=, portrait phones, less than 320px)
+@media (max-width: 319.98px) { 
+	p.card-text {
+		font-size: 12px !important;
+	}
+}
+
+/*
+|-------------------------------------------------------------------------------------------------------------------------------
+| Media Query (Min and Max)
+|-------------------------------------------------------------------------------------------------------------------------------
+| Small devices (landscape phones, 576px and up), 
+| Medium devices (tablets, 768px and up), 
+| Large devices (desktops, 992px and up), 
+| Extra large devices (large desktops, 1200px and up)
+|-------------------------------------------------------------------------------------------------------------------------------
+|
+*/
+// Small devices (landscape phones, 320px and up)
+@media (min-width: 320px) and (max-width: 374.98px) {
+}
+
+// Small devices (landscape phones, 375px and up)
+@media (min-width: 375px) and (max-width: 413.98px) {
+}
+
+// Small devices (landscape phones, 414px and up)
+@media (min-width: 414px) and (max-width: 575.98px) {
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
